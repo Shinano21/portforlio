@@ -74,14 +74,16 @@ for (let i = 0; i < selectItems.length; i++) {
 // filter variables
 const filterItems = document.querySelectorAll("[data-filter-item]");
 
+// Modified filter function
 const filterFunc = function (selectedValue) {
   for (let i = 0; i < filterItems.length; i++) {
-    if (selectedValue === "all") {
+    let itemCategory = filterItems[i].dataset.category.toLowerCase();
+    if (selectedValue === "all" || selectedValue === itemCategory) {
       filterItems[i].classList.add("active");
-    } else if (selectedValue === filterItems[i].dataset.category) {
-      filterItems[i].classList.add("active");
+      filterItems[i].style.display = "block"; // Show item
     } else {
       filterItems[i].classList.remove("active");
+      filterItems[i].style.display = "none"; // Hide item
     }
   }
 };
