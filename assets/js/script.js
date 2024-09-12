@@ -138,24 +138,24 @@ for (let i = 0; i < navigationLinks.length; i++) {
   });
 }
 
-// Modal functionality
-var modal = document.getElementById("imageModal");
-var modalImageElement = document.getElementById("modalImage"); // renamed variable
-var captionText = document.getElementById("caption");
-var span = document.getElementsByClassName("close")[0];
+// // Modal functionality
+// var modal = document.getElementById("imageModal");
+// var modalImageElement = document.getElementById("modalImage"); // renamed variable
+// var captionText = document.getElementById("caption");
+// var span = document.getElementsByClassName("close")[0];
 
-function openModal(imageSrc, title) {
-  modal.style.display = "block";
-  modalImageElement.src = imageSrc; // updated here as well
-  captionText.innerHTML = title;
-}
+// function openModal(imageSrc, title) {
+//   modal.style.display = "block";
+//   modalImageElement.src = imageSrc; // updated here as well
+//   captionText.innerHTML = title;
+// }
 
-span.onclick = function () {
-  modal.style.display = "none";
-};
+// span.onclick = function () {
+//   modal.style.display = "none";
+// };
 
-window.onclick = function (event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-};
+// window.onclick = function (event) {
+//   if (event.target == modal) {
+//     modal.style.display = "none";
+//   }
+// };
